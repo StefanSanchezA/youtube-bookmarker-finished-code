@@ -7,12 +7,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://*.youtube.com/*"],
-      "js": ["contentScript.js"]
-    }
-  ],
   "web_accessible_resources": [
     {
       "resources": [
