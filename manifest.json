@@ -1,7 +1,7 @@
 {
   "name": "YT Shorts Killer",
   "version": "0.1.0",
-  "description": "Saving timestamps in YT videos",
+  "description": "Killing youtube shorts, to boost productivity",
   "permissions": ["storage", "tabs"],
   "host_permissions": ["https://*.youtube.com/*"],
   "background": {
