@@ -2,30 +2,9 @@
   "name": "YT Shorts Killer",
   "version": "0.1.0",
   "description": "Killing youtube shorts, to boost productivity",
-  "permissions": ["storage", "tabs"],
-  "host_permissions": ["https://*.youtube.com/*"],
+  "permissions": ["storage", "tabs","webNavigation"],
   "background": {
     "service_worker": "background.js"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "assets/bookmark.png",
-        "assets/play.png",
-        "assets/delete.png",
-        "assets/save.png"
-      ],
-      "matches": ["https://*.youtube.com/*"]
-    }
-  ],
-  "action": {
-    "default_icon": {
-      "16": "assets/ext-icon.png",
-      "24": "assets/ext-icon.png",
-      "32": "assets/ext-icon.png"
-    },
-    "default_title": "YT Shorts Killer",
-    "default_popup": "popup.html"
   },
   "manifest_version": 3
 }
