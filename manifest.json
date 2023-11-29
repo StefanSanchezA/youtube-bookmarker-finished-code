@@ -1,5 +1,5 @@
 {
-  "name": "YT Shorts Killer",
+  "name": "Distractions Killer",
   "version": "0.1.0",
   "description": "Killing youtube shorts, to boost productivity",
   "permissions": ["storage", "tabs","webNavigation"],
