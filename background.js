@@ -1,4 +1,4 @@
-let lastTab = {};
+let lastTab = "https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892s&ab_channel=OmachiPham";
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   // Only act on loading tabs
@@ -12,7 +12,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     lastTab = tab.url.slice(0, 40)
 
     // Exceptions
-    if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris"))) {
+    if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris")|| tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
       // No action for this URL
       return;
     }
@@ -25,3 +25,4 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 });
 // Einzelgänger
+// https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892
