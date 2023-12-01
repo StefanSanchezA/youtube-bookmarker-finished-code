@@ -1,5 +1,5 @@
 {
-  "name": "Distractions Killer",
+  "name": "Distractions Killer Deploy Version",
   "version": "0.1.0",
   "description": "Eliminating distractions to enhance focus",
   "permissions": ["storage", "tabs","webNavigation"],
