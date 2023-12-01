@@ -5,24 +5,24 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'loading') return;
   if(tab.url){
 
-    //Dealing with Millisecond URL changes
-    if (tab.url.includes(lastTab)) {
-      return;
+        //Dealing with Millisecond URL changes
+        if (tab.url.includes(lastTab)) {
+        return;
+        }
+        lastTab = tab.url.slice(0, 40)
+
+        // Exceptions
+        if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris")|| tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
+        // No action for this URL
+        return;
+        }
     }
-    lastTab = tab.url.slice(0, 40)
 
-    // Exceptions
-    if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris")|| tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
-      // No action for this URL
-      return;
+    // Banned Applications
+    const banned = ["https://www.youtube.com/", "https://tiktok.com/", "https://www.instagram.com/", "https://www.facebook.com/", "shorts", "leonardo.ai"];
+    const isBanned = banned.some(site => tab.url.includes(site));
+    if (isBanned) {
+        // Redirected into Google Calendars
+        chrome.tabs.update(tabId, {url: "https://calendar.google.com/calendar/u/0/r?tab=rc"});
     }
-
-    // Youtube, Tiktok, IG, FB
-    else if ((tab.url.includes("youtube.com") || tab.url.includes("tiktok") || tab.url.includes("instagram") || tab.url.includes("facebook")|| tab.url.includes("shorts") || tab.url.includes("leonardo.ai"))) {
-      lastTab = {};
-      chrome.tabs.update(tabId, {url: "https://calendar.google.com/calendar/u/0/r?tab=rc"});
-    }}
-
 });
-// Einzelgänger
-// https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892

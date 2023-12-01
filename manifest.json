@@ -1,7 +1,7 @@
 {
   "name": "Distractions Killer",
   "version": "0.1.0",
-  "description": "Killing youtube shorts, to boost productivity",
+  "description": "Eliminating distractions to enhance focus",
   "permissions": ["storage", "tabs","webNavigation"],
   "background": {
     "service_worker": "background.js"
