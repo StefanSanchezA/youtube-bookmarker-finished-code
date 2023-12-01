@@ -17,6 +17,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         return;
         }
     }
+    const exceptions = ["OmachiPham", "AndrewHuberman", "RianDoris", "yLUqkgpSw7Y"];
+    const isException = exceptions.some(exception => tab.url.includes(exception));
+    
 
     // Banned Applications
     const banned = ["https://www.youtube.com/", "https://tiktok.com/", "https://www.instagram.com/", "https://www.facebook.com/", "shorts", "leonardo.ai"];
