@@ -12,7 +12,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         lastTab = tab.url.slice(0, 40)
 
         // Exceptions
-        if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris")|| tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
+        if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris") || tab.url.includes("AlexHormozi") || tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
         // No action for this URL
         return;
         }
