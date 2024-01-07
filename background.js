@@ -12,7 +12,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         lastTab = tab.url.slice(0, 40)
 
         // Exceptions
+<<<<<<< Updated upstream
         if ((tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman") || tab.url.includes("RianDoris")|| tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
+=======
+        if (( tab.url.includes("riandoris") || tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman")|| tab.url.includes("hubermanlab") || tab.url.includes("RianDoris") || tab.url.includes("AlexHormozi") || tab.url.includes("https://www.youtube.com/watch?v=yLUqkgpSw7Y&t=39892"))) {
+>>>>>>> Stashed changes
         // No action for this URL
         return;
         }
