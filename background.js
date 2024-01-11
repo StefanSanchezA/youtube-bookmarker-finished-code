@@ -19,7 +19,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 
     // Banned Applications
-    const banned = ["https://www.youtube.com/", "https://tiktok.com/", "https://www.instagram.com/", "https://www.facebook.com/", "shorts", "leonardo.ai"];
+    const banned = ["https://www.youtube.com/", "https://tiktok.com/", "https://www.instagram.com/", "https://www.facebook.com/", "shorts"];
     const isBanned = banned.some(site => tab.url.includes(site));
     if (isBanned) {
         // Redirected into Google Calendars
