@@ -12,7 +12,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         lastTab = tab.url.slice(0, 40)
 
         // Exceptions
-        if ((tab.url.includes("market") || tab.url.includes("riandoris") || tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman")|| tab.url.includes("hubermanlab") || tab.url.includes("RianDoris") || tab.url.includes("AlexHormozi") || tab.url.includes("hughesspaceschool") || tab.url.includes("HughesSpaceSchool"))) {
+        if ((tab.url.includes("market") || tab.url.includes("riandoris") || tab.url.includes("OmachiPham") || tab.url.includes("AndrewHuberman")|| tab.url.includes("hubermanlab") || tab.url.includes("RianDoris") || tab.url.includes("AlexHormozi") || tab.url.includes("hughesspaceschool") || tab.url.includes("HughesSpaceSchool") || tab.url.includes("UnitedSpaceSchool"))) {
         // No action for this URL
         return;
         }
